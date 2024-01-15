@@ -42,9 +42,9 @@ app.get("/african", (req, res)=>{
     res.sendFile(__dirname+'/pages/9african.html')
      
 })
-io.on('connection', async(socket) => {
+io.on('connection', (socket) => {
     let count = 0
-    let StopRes = await setInterval(async()=>{
+    let StopRes = setInterval(async()=>{
       socket.emit('count', count)
       count++
       if(count >= 60){
