@@ -123,7 +123,7 @@ African societies place a strong emphasis on communal living and familial bonds.
 <script>
        var socket = io();
        var count = document.querySelector(".count")
-       socket.on("count", async(msg)=>{
+       socket.on("count", (msg)=>{
             count.innerHTML = msg
        })
 </script>
