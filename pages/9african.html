@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>culture of african</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            color: white;
+            text-decoration: none;
+        }
+        body{
+          display: flex;
+          flex-direction: column;
+          background: #080708;
+        }
+        .contant{
+            width: 100%;
+        }
+        .contant section{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+           align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+        .contant section *{
+            border: none;
+            margin: 3%;
+            padding: 1%;
+            margin-top: 3%;
+          
+        }
+        .contant section div {
+            background: #3772FF;
+        }
+        .contant section input{
+           width: 10%;
+           padding: 2%;
+        }
+     
+       
+        .home{
+          display: flex;
+        
+          background: #535353;
+       
+        }
+        .home *{
+            padding: 4%;
+            text-decoration: none;
+            color: white;
+        }
+        button{
+            background: #535353;
+            
+           
+        }
+   
+      
+    
+       
+    </style>
+</head>
+<body>
+    <section class="home">
+        <a href="/">HOME</a>
+        <a href=
+        "about">ABOUT US</a>
+      </section>
+    <section class="contant">
+       <section>
+       
+        
+<p>African culture is a tapestry woven from the threads of diverse histories, traditions, languages, and customs across the vast continent. Encompassing 54 countries, each with its unique identity, Africa is a kaleidoscope of vibrant cultures that reflect the rich tapestry of its people.</p>
+<div>
+<h2>Cultural Diversity:</h2>
+<p>The immense diversity within Africa is one of its defining features. From the Berbers in North Africa to the Zulu in the South, and from the Yoruba in the West to the Maasai in the East, the continent is a mosaic of ethnic groups, each with its languages, artistic expressions, and distinct cultural practices.</p>
+</div>
+<div>
+<h2>Oral Tradition:</h2>
+<p>One of the hallmarks of African culture is its strong emphasis on oral tradition. Through storytelling, proverbs, and folklore, knowledge, history, and wisdom are passed down from generation to generation. Griots, the storytellers and keepers of history, play a vital role in preserving and transmitting the cultural heritage of their communities.</p>
+</div>
+<div>
+<h2>Art and Music:</h2>
+<p>African art is renowned for its diversity, creativity, and symbolic meaning. Traditional masks, sculptures, beadwork, and textiles often convey cultural stories, spiritual beliefs, and social roles. Music is a central element of African culture, with rhythmic beats, melodic tunes, and vibrant dances playing significant roles in ceremonies, celebrations, and everyday life.</p>
+</div>
+<div>
+<h2>Spirituality and Religion:</h2>
+<p>African spirituality is deeply rooted in connection to the land, ancestors, and the cosmos. Traditional African religions vary across regions, incorporating animism, ancestor worship, and complex cosmologies. Islam and Christianity, introduced through historical trade routes and colonialism, coexist with indigenous beliefs, creating a rich tapestry of religious diversity.</p>
+</div>
+<div>
+<h2>Family and Community:</h2>
+African societies place a strong emphasis on communal living and familial bonds. Extended families often live together, and the concept of "Ubuntu" in Southern Africa emphasizes interconnectedness and shared humanity. Community support is integral to daily life, and ceremonies marking important life events are often communal celebrations.
+</div>
+<div>
+<h2>Cuisine:</h2>
+<p>African cuisine is as diverse as the continent itself. From the couscous-based dishes of North Africa to the spicy stews of West Africa and the maize-based dishes in the South, food is an expression of cultural identity. Shared meals and communal eating are integral to social bonds and celebrations.</p>
+</div>
+<div>
+<h2>Clothing and Adornments:</h2>
+<p>Traditional African attire is a vibrant expression of cultural identity. Colorful fabrics, intricate beadwork, and distinctive hairstyles often communicate social status, age, and tribal affiliation. Adornments such as jewelry and body art also hold cultural significance, reflecting spirituality, rites of passage, and personal identity</p>
+</div>
+<div>
+<h2>Resilience and Adaptability:</h2>
+<p>African cultures embody resilience and adaptability, evident in the face of historical challenges such as colonization, the transatlantic slave trade, and contemporary socio-economic issues. Despite adversity, African communities have preserved their rich heritage and continue to contribute significantly to global cultural diversity.</p>
+</div>
+<p>In summary, African culture is a testament to the continent's remarkable diversity, resilience, and rich heritage. With a legacy deeply rooted in traditions passed down through generations, Africa continues to evolve, embracing its cultural richness while navigating the complexities of the modern world.</p>
+
+        <button><a href="american">next</a></button>
+
+        <h2 class="count"></h2>
+      </section>
+    </section>
+    <script src="/socket.io/socket.io.js"></script>
+<script>
+       var socket = io();
+       var count = document.querySelector(".count")
+       socket.on("count", async(msg)=>{
+            count.innerHTML = msg
+       })
+</script>
+</body>
+</html>
